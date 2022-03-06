@@ -38,3 +38,14 @@ df_elbow.hvplot.line(x="k", y="inertia", title="Elbow Curve", xticks=k)
 ### Where our axes are defined by "k"and "inertia." For response answer, please refer to the notebook.
 
 ## Cluster Cryptocurrencies with K-means Using the Original Data
+### 1. From the written answer, we got a k of 4. We now create a model variable assigned to KMeans with parameters of n_clusters=4 and random_state=1. To fit the model, we next use model.fit(df_elbow).
+
+### 2. To predict the crypto clusters, we now make a scaled_crypto variable assigned to model.predict(df_elbow), followed by a print statement. For a copy of the dataframe, we use df_elbow.copy(). We need a new column for cluster predictions in scaled_crypto_copy, which is done through the following code:
+
+scaled_crypto_copy['Cluster Predictions'] = scaled_crypto
+
+scaled_crypto_copy.tail()
+
+### 3. 
+
+
