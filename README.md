@@ -134,15 +134,32 @@ cluster_pca= market_pca_predictions.hvplot.scatter(
 cluster_pca
 
 ## Visualize and Compare the Results
-### 1. Simply for both, we use use a similar process with the + operator:
+### 1. Simply for both, we use use a similar process with the + operator, followed by using .opts():
 
 composite_plot = inertia_plot + inertia_pca
 
-composite_plot
+composite_plot.opts(
+
+    height= 500,
+    
+    width=1000,
+    
+    title ="Elbow Curve for Original vs. PCA Data"
+    
+)
+
 
 composite_plot_two = cluster + cluster_pca
 
-composite_plot_two
+composite_plot_two.opts(
+
+    height= 500,
+    
+    width=1000,
+    
+    title ="Cryptocurrency Clusters from Original vs. PCA Data"
+    
+)
 
 For written answer, please refer to the notebook.
 
